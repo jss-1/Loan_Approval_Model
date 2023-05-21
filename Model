@@ -68,7 +68,7 @@ y[0:5]
 X= preprocessing.StandardScaler().fit(X).transform(X)
 X[0:5]
 
-//KNN
+#KNN
 from sklearn.model_selection import train_test_split
 X_train, X_test, y_train, y_test = train_test_split( X, y, test_size=0.2, random_state=4)
 print ('Train set:', X_train.shape,  y_train.shape)
@@ -109,7 +109,7 @@ plt.tight_layout()
 plt.show()
 print( "Best accuracy:", mean_acc.max(), "k=", mean_acc.argmax()+1)
 
-//Decision Tree
+#Decision Tree
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.model_selection import train_test_split
 X_trainset, X_testset, y_trainset, y_testset = train_test_split(X, y, test_size=0.3, random_state=3)
@@ -145,7 +145,7 @@ img = mpimg.imread(filename)
 plt.figure(figsize=(100, 200))
 plt.imshow(img,interpolation='nearest')
 
-//SVM
+#SVM
 df.dtypes
 df = df[pd.to_numeric(df['education'], errors='coerce').notnull()]
 df['education'] = df['education'].astype('int')
@@ -196,7 +196,7 @@ f1_score(y_test, yhat, average='weighted')
 from sklearn.metrics import jaccard_similarity_score
 jaccard_similarity_score(y_test, yhat)
 
-//Logistic Regression
+#Logistic Regression
 df = df[['loan_status', 'Principal', 'terms', 'effective_date', 'due_date', 'age', 'education', 'Gender']]
 df['loan_status'] = df['loan_status'].astype('int')
 
@@ -222,7 +222,7 @@ jaccard_similarity_score(y_test, yhat)
 from sklearn.metrics import log_loss
 log_loss(y_test, yhat_prob)
 
-//Model Evaluation
+#Model Evaluation
 from sklearn.metrics import jaccard_similarity_score
 from sklearn.metrics import f1_score
 from sklearn.metrics import log_loss
